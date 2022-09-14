@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+<script>
+  var loginCadastrado = "alura";
+  var senhaCadastrada = "alura321";
+
+  var loginInformado = prompt("Informe seu login");
+  var senhaInformada = prompt("Informe sua senha");
+  var contador = 1;
+
+  while (contador <= 2) {
+    if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada){
+      alert("Bem-vindo ao sistema " + loginInformado);
+      break;
+    } else {
+      alert("Login inválido. Tente novamente");
+      loginInformado = prompt("Informe seu login");
+      senhaInformada = prompt("Informe sua senha");
+      contador = contador + 1;//ou no lugar de contador = contador + 1 vc pode usar so contador++
+    } if(contador == 3) {
+      alert("Número permitido de tentativas ultrapassado!");
+    }
+
+  }
+</script>
